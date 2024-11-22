@@ -14,7 +14,7 @@ jobs:
 
         steps:
             - name: "CLone repository"
-              uses: actions/checkout@3
+              uses: actions/checkout@v4
 
             - name: "Build project "
               run: ./gradlew build
