@@ -30,3 +30,11 @@ jobs:
 
             - name: "Build project "
               run: ./gradlew build
+
+            - name : Produce distribution"
+              run: ./gradlew distZip
+
+            - uses : actions/upload-artifact@v4
+              with: 
+                path: build/distributions/rps-starter.zip
+                name: rps-java-${{matrix.java-version}}
